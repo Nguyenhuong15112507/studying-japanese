@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./login-style.css">
+</head>
+<body>
+    <header class="login-header">
+        <h1 class="login-page-title">KAORI LEARNING</h1>
+    </header>
+    <div class="login-body">
+        <div class="login-page-img">
+            <img src="./css/img/372897279_1248037612573345_1597688897822203750_n.jpg" alt="" class="page-img">
+        </div>        
+        <div class="login-container">
+            <div class="login-form">
+                <h3 class="login-form-title">Sign up</h3>
+                <div class="input-item">
+                    <span class="input-label"><label for="id" >User name</label></span>
+                    <input type="text" class="login-input" id="id" placeholder="Enter your user name...">
+                </div>
+                <div class="input-item">
+                    <span class="input-label"><label for="pw">Password</label></span>
+                    <input type="text" class="login-input" id="pw" placeholder="Enter your password...">
+                </div>
+                <div class="input-item">
+                    <span class="input-label"><label for="authority">Authority</label></span>
+                    <select type="text" class="login-input selector" id="authority">
+                        <option id="option-teacher" value="teacher">Teacher</option>
+                        <option id="option-student" value="student">Student</option>
+                    </select>
+                </div>
+                <div class="input-item-check">
+                    <input type="checkbox" id="remember">
+                    <label for="remember" class="input-label">Remember me</label>
+                </div>
+                <div class="login-btn-container">
+                    <button class="login-btn" id="login-signup-btn" onclick="login()">Sign up</button>
+                </div>
+            </div>
+            <div class="signup">
+                <div class="create-account"><a href="#">Create an account</a></div>
+                <div class="another-login-method">
+                    <span class="another-login-mes">Or login with</span>
+                    <a class="login-method" href="https://www.facebook.com/"><i class="fab fa-facebook-square" style="color: rgb(37, 37, 147);"></i></a>
+                    <a class="login-method" href="#"><i class="fab fa-instagram-square" style="color: rgb(178, 30, 148);"></i></a>
+                    <a class="login-method" href="#"><i class="fas fa-envelope" style="color: rgb(172, 35, 46);"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="./main.js"></script> 
+</body>
+</html>
