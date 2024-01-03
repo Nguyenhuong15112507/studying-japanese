@@ -65,9 +65,10 @@
         </div>
         <div class="page-container">
             <div class="content-input">
-                <h3 class="title-content">Upload homework</h3>
-                <button class="new-btn" id="creat-new-lesson-btn">Create</button>
-                <div class="new-input lesson">
+                <h3 class="title-content">Give Question</h3>
+                <div class="content-input-header">
+                <button class="new-btn" id="creat-new-lesson-btn" onclick="isvisible(popupContainner)">Question</button>
+                <!-- <div class="new-input lesson">
                     <h4 class="form-title">Homework</h4>
                     <div class="new-form lesson-create">
                         <div class="input-item">
@@ -93,16 +94,17 @@
                         <button class="new-btn submit-btn" id="submit-lesson-btn">Submit</button>
                         <button class="new-btn cancel-btn" id="cancel-lesson-btn">Cancel</button>
                     </div>
-                </div>
+                </div> -->
                 <div class="homwork-list-header">
                     <label for="status">Status</label>
-                    <select name="status" id="">
+                    <select name="status" id="status-filter">
                         <option value="Waiting">Waiting</option>
                         <option value="Doing">Doing</option>
                         <option value="Finished">Finished</option>
                         <option value="Pending">Pending</option>
                     </select>
                 </div>
+            </div>
                 <div class="list-content-item lesson-homework-list">
                     <div class="lession-content-overview lession-homework-overview">
                         <h4 class="lesson-name">N5: Vocabulary1 homework</h4>
@@ -116,7 +118,7 @@
                         </div>
                         <p class="overview-para">I've already finish this homework, but i have some Q&A. Please check these Q&A in this URL</p>
                         <div class="show-detail-and-practice">
-                            <button class="check-homework-btn">Check result</button>
+                            <button class="check-homework-btn">Show detail</button>
                         </div>
                     </div>
                     <div class="lession-content-overview lession-homework-overview">
@@ -131,7 +133,7 @@
                         </div>
                         <p class="overview-para">I've already finish this homework, but i have some Q&A. Please check these Q&A in this URL</p>
                         <div class="show-detail-and-practice">
-                            <button class="check-homework-btn">Check result</button>
+                            <button class="check-homework-btn">Show detail</button>
                         </div>
                     </div>
                     <div class="lession-content-overview lession-homework-overview">
@@ -146,7 +148,7 @@
                         </div>
                         <p class="overview-para">I've already finish this homework, but i have some Q&A. Please check these Q&A in this URL</p>
                         <div class="show-detail-and-practice">
-                            <button class="check-homework-btn">Check result</button>
+                            <button class="check-homework-btn">Show detail</button>
                         </div>
                     </div>
                     <div class="lession-content-overview lession-homework-overview">
@@ -161,7 +163,7 @@
                         </div>
                         <p class="overview-para">I've already finish this homework, but i have some Q&A. Please check these Q&A in this URL</p>
                         <div class="show-detail-and-practice">
-                            <button class="check-homework-btn">Check result</button>
+                            <button class="check-homework-btn">Show detail</button>
                         </div>
                     </div>
                 </div>
@@ -413,7 +415,59 @@
             </div>
         </div>
     </div>
-
+    <div class="popup-containner">
+        <div class="new-input lesson">
+            <h4 class="form-title" style="font-size: 20px;">Lesson</h4>
+            <div class="new-form lesson-create">
+                <div class="input-item">
+                    <span class="span-label"><label for="lessonName">Title</label></span>
+                    <input type="text" name="lessonName" id="lessonName">
+                </div>
+                <div class="input-item">
+                    <span class="span-label"><label for="lessonContent">Content</label></span>
+                    <textarea name="lessonContent" id="lessonContent"></textarea>
+                </div>
+                <div class="input-item">
+                    <span class="span-label"><label for="date">Date</label></span>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div class="input-item">
+                    <span class="span-label"><label for="homework-url">Upload</label></span>
+                    <input type="text" name="homework-url" id="homework-url">
+                    <input type="file" name="homework" id="homework">
+                </div>
+                
+            </div>
+            <div class="btn-container">
+                <button class="new-btn submit-btn" id="submit-lesson-btn">Submit</button>
+                <button class="new-btn cancel-btn" id="cancel-lesson-btn" onclick="isnotvisible(popupContainner)">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- Announce create -->
+    <div class="anouncement-create">
+        <div class="new-input announce">
+            <h4 class="form-title">New announce</h4>
+            <div class="new-form announce-create">
+                <div class="input-item">
+                    <span class="span-label"><label for="lessonName">Title</label></span>
+                    <input type="text" name="lessonName" id="announceName">
+                </div>
+                <div class="input-item">
+                    <span class="span-label"><label for="lessonContent">Content</label></span>
+                    <textarea name="lessonContent" id="announceContent"></textarea>
+                </div>
+                <div class="input-item">
+                    <span class="span-label"><label for="date">Date</label></span>
+                    <input type="date" name="date" id="announcedate">
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="new-btn submit-btn" id="submit-createdanounce-btn" onclick="appendNewAnnounce()">Submit</button>
+                <button class="new-btn cancel-btn" id="cancel-createdanounce-btn" onclick="isnotvisible(anouncementCreate)">Cancel</button>
+            </div>
+        </div>
+    </div>
 <footer>Powered by W3.css</footer>
     <script src="./main.js"></script>
 </body>
